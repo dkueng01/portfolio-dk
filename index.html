@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Küng | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .serif-accent {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-stone-50 text-stone-900 antialiased selection:bg-orange-300 selection:text-orange-900 flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold tracking-tight">DK<span class="text-orange-500">.</span></a>
+
+      <div class="flex gap-4 text-sm font-medium">
+        <button onclick="setLang('en')" class="hover:text-orange-600 transition">EN</button>
+        <button onclick="setLang('de')" class="hover:text-orange-600 transition">DE</button>
+        <button onclick="setLang('walser')" class="hover:text-orange-600 transition italic serif-accent">Walser</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-28 pb-12 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center min-h-[85vh]">
+
+    <!-- Text Bereich -->
+    <div class="fade-in order-2 md:order-1">
+      <p class="text-orange-600 font-semibold mb-2 uppercase tracking-wider text-xs" data-key="hero-subtitle">Developer
+        & Photographer</p>
+      <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
+        <span data-key="greeting">Hi, I'm</span> <br />
+        <span class="serif-accent italic font-normal text-stone-600">David Küng</span>
+      </h1>
+      <p class="text-lg text-stone-600 max-w-md mb-8 leading-relaxed" data-key="hero-bio">
+        Based in Vorarlberg, coding in Liechtenstein. I build digital products by day and capture moments through KUENG
+        CREATIVE STUDIO by weekend.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#about"
+          class="bg-stone-900 text-white px-6 py-3 rounded-full font-medium hover:bg-stone-700 transition"
+          data-key="btn-about">About Me</a>
+        <a href="projects.html"
+          class="border border-stone-300 px-6 py-3 rounded-full font-medium hover:bg-white hover:shadow-lg transition flex items-center gap-2 group">
+          <span data-key="btn-projects">See Coding Projects</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bild Bereich: 'hidden' auf Mobile, 'flex' ab md (Desktop/Tablet) -->
+    <div class="hidden md:flex relative group order-1 md:order-2 justify-end h-full">
+      <!-- Dekorativer Hintergrund -->
+      <div
+        class="absolute inset-0 bg-orange-100 rounded-[2rem] transform rotate-2 scale-95 z-0 transition group-hover:rotate-0">
+      </div>
+      <!-- Dein Bild -->
+      <img src="https://placehold.co/600x700/EEE/31343C" alt="David Küng"
+        class="relative z-10 rounded-[2rem] shadow-xl w-full max-w-md object-cover transform transition duration-500 group-hover:-translate-y-1">
+    </div>
+
+  </header>
+
+  <!-- About / Hobbies Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+
+        <!-- Column 1: The Dev -->
+        <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100 flex flex-col h-full">
+          <h3 class="text-2xl font-bold mb-4" data-key="sec-work-title">The Developer</h3>
+          <p class="text-stone-600 mb-6 flex-grow" data-key="sec-work-text">
+            24 years old, living in Plazera. I work for a software company in Liechtenstein. I don't just code for
+            work—I build tools to optimize my own life.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span
+              class="px-3 py-1 bg-blue-50 text-blue-800 border border-blue-100 text-xs font-bold rounded-full">React</span>
+            <span
+              class="px-3 py-1 bg-green-50 text-green-800 border border-green-100 text-xs font-bold rounded-full">Angular</span>
+            <span
+              class="px-3 py-1 bg-yellow-50 text-yellow-800 border border-yellow-100 text-xs font-bold rounded-full">Node.js</span>
+          </div>
+        </div>
+
+        <!-- Column 2: The Creative -->
+        <div
+          class="bg-stone-900 text-stone-100 p-8 rounded-2xl shadow-xl flex flex-col h-full transform md:-translate-y-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="serif-accent italic font-normal text-orange-400">KUENG</span> CREATIVE
+          </h3>
+          <p class="text-stone-300 mb-6 flex-grow" data-key="sec-kcs-text">
+            My secondary business where I pursue my passion for photography. From portraits to landscapes in the
+            Austrian Alps.
+          </p>
+          <a href="https://kuengcreative.studio" target="_blank"
+            class="inline-flex items-center gap-2 text-orange-400 hover:text-white transition group">
+            <span data-key="btn-visit-kcs">Visit Studio</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+
+        <!-- Column 3: The Human -->
+        <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100 flex flex-col h-full">
+          <h3 class="text-2xl font-bold mb-4" data-key="sec-personal-title">The Human</h3>
+          <p class="text-stone-600 mb-4 flex-grow" data-key="sec-personal-text">
+            Huge sports fan: Football, Skiing, Tennis, Gym. When not moving, I'm with my two dogs, Cody and Henry.
+          </p>
+          <div class="flex items-center gap-3 mt-4 pt-4 border-t border-stone-200">
+            <div class="h-8 w-8 rounded-full bg-orange-100 flex items-center justify-center text-sm">🐶</div>
+            <span class="font-semibold text-sm text-stone-700">Cody & Henry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography Grid -->
+  <section class="py-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-center flex flex-col items-center">
+      <span class="serif-accent italic font-normal text-stone-500 text-xl">Gallery</span>
+      <span data-key="gallery-title">Moments & Paws</span>
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px]">
+      <!-- Foto 1 (Groß) -->
+      <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer">
+        <img src="https://placehold.co/800x800/222/FFF"
+          class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="KCS Work">
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+      </div>
+
+      <!-- Foto 2 -->
+      <div class="relative group overflow-hidden rounded-2xl">
+        <img src="https://placehold.co/400x400/888/FFF"
+          class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Dog 1">
+      </div>
+
+      <!-- Foto 3 -->
+      <div class="relative group overflow-hidden rounded-2xl">
+        <img src="https://placehold.co/400x400/999/FFF"
+          class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Skiing">
+      </div>
+
+      <!-- Foto 4 (Breit) -->
+      <div class="col-span-2 relative group overflow-hidden rounded-2xl">
+        <img src="https://placehold.co/800x400/333/FFF"
+          class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Landscape">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-stone-900 text-stone-400 py-2 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; 2026 David Küng. Made in Vorarlberg.</p>
+    </div>
+  </footer>
+
+  <!-- Translations & Script -->
+  <script>
+    const translations = {
+      en: {
+        "hero-subtitle": "Developer & Photographer",
+        "greeting": "Hi, I'm",
+        "hero-bio": "Based in Vorarlberg, coding in Liechtenstein. I build digital products by day and capture moments through KUENG CREATIVE STUDIO by weekend.",
+        "btn-about": "About Me",
+        "btn-projects": "See Coding Projects",
+        "sec-work-title": "The Developer",
+        "sec-work-text": "24 years old, living in Plazera. I work for a software company in Liechtenstein. I don't just code for work—I build tools to optimize my own life.",
+        "sec-kcs-text": "My secondary business where I pursue my passion for photography. From portraits to landscapes in the Austrian Alps.",
+        "btn-visit-kcs": "Visit Studio",
+        "sec-personal-title": "The Human",
+        "sec-personal-text": "Huge sports fan: Football, Skiing, Tennis, Gym. When not moving, I'm with my two dogs, Cody and Henry.",
+        "gallery-title": "Moments & Paws"
+      },
+      de: {
+        "hero-subtitle": "Entwickler & Fotograf",
+        "greeting": "Hallo, ich bin",
+        "hero-bio": "Zuhause in Vorarlberg, Coding in Liechtenstein. Tagsüber entwickle ich digitale Produkte, am Wochenende fange ich Momente mit KUENG CREATIVE STUDIO ein.",
+        "btn-about": "Über mich",
+        "btn-projects": "Coding Projekte",
+        "sec-work-title": "Der Entwickler",
+        "sec-work-text": "24 Jahre alt, wohnhaft in Plazera. Ich arbeite für ein Softwareunternehmen in Liechtenstein. Ich code nicht nur beruflich, sondern baue Tools, um meinen Alltag zu optimieren.",
+        "sec-kcs-text": "Mein Nebengewerbe, in dem ich meine Leidenschaft für Fotografie auslebe. Von Portraits bis zu Landschaften in den Alpen.",
+        "btn-visit-kcs": "Zum Studio",
+        "sec-personal-title": "Der Mensch",
+        "sec-personal-text": "Großer Sportfan: Fußball, Skifahren, Tennis, Fitnessstudio. Wenn ich nicht in Bewegung bin, bin ich bei meinen Hunden Cody und Henry.",
+        "gallery-title": "Momente & Pfoten"
+      },
+      walser: {
+        "hero-subtitle": "Programmierer & Fotograf",
+        "greeting": "Hoi, i bin da",
+        "hero-bio": "Dahom im Ländle, schaffa im Liechtenstein. Untertags am programmiera und am Wochenend mitm KUENG CREATIVE STUDIO unterwegs.",
+        "btn-about": "Übr mi",
+        "btn-projects": "Coding Projekte",
+        "sec-work-title": "Da Programmierer",
+        "sec-work-text": "24 Johr alt, wohn in Plazera. Schaffa tua i im Liechtenstein bei na Softwarebude. I programmier o gern für mi selber, damit alles a biz einfacher und schneller goht.",
+        "sec-kcs-text": "Nebather mach i richtig gern Fotos vo jeglicha Events vo Vereine und Firmena.",
+        "btn-visit-kcs": "Schau drs Studio mol a",
+        "sec-personal-title": "Da Mensch",
+        "sec-personal-text": "I mach richtig gern Sport: Tschuttna, Schifahra (+Schitoura), Tennis und ins Gym. Und sus bin i bei mina Hünd (Cody & Henry).",
+        "gallery-title": "Bilder & Hünd"
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang][key]) {
+          elem.innerText = translations[lang][key];
+          elem.classList.remove('fade-in');
+          void elem.offsetWidth;
+          elem.classList.add('fade-in');
+        }
+      });
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'de';
+      setLang(savedLang);
+    });
+  </script>
+</body>
+
+</html>
