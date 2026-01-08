@@ -34,13 +34,13 @@
 </head>
 
 <body
-  class="bg-stone-50 text-stone-900 antialiased selection:bg-red-300 selection:text-red-900 flex flex-col min-h-screen">
+  class="bg-stone-50 text-stone-900 antialiased selection:bg-red-200 selection:text-red-900 flex flex-col min-h-screen">
 
   <!-- Navigation -->
   <nav class="fixed top-0 w-full z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="text-xl font-bold tracking-tight hover:opacity-70 transition">DK<span
-          class="text-red-500">.</span></a>
+          class="text-red-600">.</span></a>
 
       <a href="index.html" class="text-sm font-medium flex items-center gap-2 hover:text-red-600 transition group">
         <span class="group-hover:-translate-x-1 transition-transform">←</span> <span data-key="nav-back">Back
@@ -54,7 +54,7 @@
 
     <!-- Header Section -->
     <div class="mb-16">
-      <p class="text-red-600 font-semibold mb-2 uppercase tracking-wider text-xs" data-key="proj-subtitle">My Code
+      <p class="text-red-700 font-semibold mb-2 uppercase tracking-wider text-xs" data-key="proj-subtitle">My Code
         Garage</p>
       <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
         <span data-key="proj-title-main">Side Projects</span> <br />
@@ -69,63 +69,173 @@
     <!-- Projects Grid -->
     <div class="grid gap-8">
 
-      <!-- Project 1 -->
+      <!-- Project 1: Key Clicker Pro -->
       <article
         class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
           <div class="flex items-center gap-3">
-            <div class="h-10 w-10 bg-stone-900 text-white rounded-lg flex items-center justify-center font-bold">WA
+            <div class="h-10 w-10 bg-stone-900 text-white rounded-lg flex items-center justify-center font-bold">KC
             </div>
             <div>
-              <h3 class="text-xl font-bold group-hover:text-red-600 transition" data-key="p1-title">Workflow
-                Automator</h3>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">Key Clicker Pro</h3>
               <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
-                <span>Python</span> • <span>Bash</span>
+                <span>Python</span>
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="https://github.com/dkueng01/key_clicker" target="_blank"
             class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
-            <span data-key="btn-view-code">View Code</span> <svg class="w-4 h-4" fill="currentColor"
-              viewBox="0 0 24 24">
+            <span data-key="btn-source">View Source</span>
+            <!-- Github Icon -->
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
           </a>
         </div>
-        <p class="text-stone-600 leading-relaxed" data-key="p1-desc">
-          A CLI tool I built to automate the setup of new project directories and Git repositories at work. Saves me
-          about 10 minutes per project setup by handling boilerplate creation and environment variables.
+        <p class="text-stone-600 leading-relaxed" data-key="p-keyclicker-desc">
+          ...
         </p>
       </article>
 
-      <!-- Project 2 -->
+      <!-- Project 2: TipsyTrail -->
+      <article
+        class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold">TT
+            </div>
+            <div>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">TipsyTrail</h3>
+              <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
+                <span>Web App</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://tipsytrail.xyz/" target="_blank"
+            class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
+            <span data-key="btn-try">Try it out</span>
+            <!-- External Link Icon -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-stone-600 leading-relaxed" data-key="p-tipsytrail-desc">
+          ...
+        </p>
+      </article>
+
+      <!-- Project 3: Screenshot Viewer -->
+      <article
+        class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 bg-stone-200 text-stone-600 rounded-lg flex items-center justify-center font-bold">SV
+            </div>
+            <div>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">Screenshot Viewer</h3>
+              <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
+                <span>Web Tool</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://screenshot-viewer-azure.vercel.app/" target="_blank"
+            class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
+            <span data-key="btn-try">Try it out</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-stone-600 leading-relaxed" data-key="p-screenshot-desc">
+          ...
+        </p>
+      </article>
+
+      <!-- Project 4: BeerPongArena -->
+      <article
+        class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center font-bold">
+              BP</div>
+            <div>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">BeerPongArena</h3>
+              <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
+                <span>Web App</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://beer-pong-arena.vercel.app/" target="_blank"
+            class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
+            <span data-key="btn-try">Try it out</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-stone-600 leading-relaxed" data-key="p-beerpong-desc">
+          ...
+        </p>
+      </article>
+
+      <!-- Project 5: Teller und Tacheles -->
       <article
         class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
           <div class="flex items-center gap-3">
             <div class="h-10 w-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center font-bold">
-              PF</div>
+              TT</div>
             <div>
-              <h3 class="text-xl font-bold group-hover:text-red-600 transition" data-key="p2-title">Personal Finance
-                Tracker</h3>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">Teller und Tacheles</h3>
               <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
-                <span>Vue.js</span> • <span>Firebase</span>
+                <span>Blog</span> • <span>Vercel</span>
               </div>
             </div>
           </div>
-          <a href="#"
+          <a href="https://teller-und-tacheles.vercel.app/" target="_blank"
             class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
-            <span data-key="btn-view-code">View Code</span> <svg class="w-4 h-4" fill="currentColor"
-              viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            <span data-key="btn-visit">Visit Site</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
           </a>
         </div>
-        <p class="text-stone-600 leading-relaxed" data-key="p2-desc">
-          A dashboard to visualize my monthly expenses. I built this to learn Vue 3 composition API and understand
-          real-time databases better.
+        <p class="text-stone-600 leading-relaxed" data-key="p-teller-desc">
+          ...
+        </p>
+      </article>
+
+      <!-- Project 6: SPG Clubhouse Screen -->
+      <article
+        class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:border-red-300 hover:shadow-md transition duration-300 group">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 bg-stone-900 text-white rounded-lg flex items-center justify-center font-bold">SC
+            </div>
+            <div>
+              <h3 class="text-xl font-bold group-hover:text-red-600 transition">SPG Clubhouse Screen</h3>
+              <div class="flex gap-2 text-xs font-mono mt-1 text-stone-500">
+                <span>TV App</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://spggwt-clubhouse-screen.vercel.app/" target="_blank"
+            class="mt-4 md:mt-0 px-4 py-2 border border-stone-200 rounded-lg text-sm font-medium hover:bg-stone-50 transition flex items-center gap-2">
+            <span data-key="btn-visit">Visit Site</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-stone-600 leading-relaxed" data-key="p-spg-desc">
+          ...
         </p>
       </article>
 
@@ -148,11 +258,16 @@
         "proj-title-main": "Side Projects",
         "proj-title-sub": "& Experiments",
         "proj-intro": "Tools I build to improve my daily workflow, learn new frameworks, or just for fun when I'm not behind the camera.",
-        "btn-view-code": "View Code",
-        "p1-title": "Workflow Automator",
-        "p1-desc": "A CLI tool I built to automate the setup of new project directories and Git repositories at work. Saves me about 10 minutes per project setup by handling boilerplate creation and environment variables.",
-        "p2-title": "Personal Finance Tracker",
-        "p2-desc": "A dashboard to visualize my monthly expenses. I built this to learn Vue 3 composition API and understand real-time databases better."
+        "btn-source": "View Source",
+        "btn-try": "Try it out",
+        "btn-visit": "Visit Site",
+
+        "p-keyclicker-desc": "A Python script that plays a mechanical keyboard sound every time you press a key. Perfect for when you're coding on a laptop with headphones and miss that satisfying 'click'. Tested on Windows only.",
+        "p-tipsytrail-desc": "A legendary drinking game we used to play on drawn paper. The original got lost, so I rebuilt it as a web app to have it available anywhere, anytime.",
+        "p-screenshot-desc": "A simple little tool to quickly view screenshots and images from your clipboard in a window.",
+        "p-beerpong-desc": "A website to organize Beer Pong tournaments, including group stages and knockout rounds. Built it spontaneously for a party.",
+        "p-teller-desc": "I love recommending restaurants to people. That's why I built this small blog where I rate and review restaurants whenever I go out to eat.",
+        "p-spg-desc": "The name says it all... a website running on the TV in the clubhouse in Raggal to display information dynamically."
       },
       de: {
         "nav-back": "Zurück",
@@ -160,11 +275,16 @@
         "proj-title-main": "Nebenprojekte",
         "proj-title-sub": "& Experimente",
         "proj-intro": "Tools, die ich baue, um meinen Arbeitsablauf zu verbessern, neue Frameworks zu lernen oder einfach zum Spaß, wenn ich nicht hinter der Kamera stehe.",
-        "btn-view-code": "Zum Code",
-        "p1-title": "Workflow Automator",
-        "p1-desc": "Ein CLI-Tool, um das Aufsetzen neuer Projektordner und Git-Repositories bei der Arbeit zu automatisieren. Spart mir ca. 10 Minuten pro Projekt.",
-        "p2-title": "Haushaltsbuch Tracker",
-        "p2-desc": "Ein Dashboard, um meine monatlichen Ausgaben zu visualisieren. Gebaut, um die Vue 3 Composition API und Realtime-Datenbanken besser zu verstehen."
+        "btn-source": "Code ansehen",
+        "btn-try": "Ausprobieren",
+        "btn-visit": "Ansehen",
+
+        "p-keyclicker-desc": "Ein Python-Skript, das bei jedem Tastendruck das Geräusch einer mechanischen Tastatur abspielt. Perfekt, wenn man Kopfhörer trägt, am Laptop programmiert und das 'Klicken' vermisst. Nur auf Windows getestet.",
+        "p-tipsytrail-desc": "Ein legendäres Trinkspiel, das wir früher auf Papier gezeichnet gespielt haben. Das Original ging verloren, also habe ich es als Web-App nachgebaut, damit man es immer und überall dabei hat.",
+        "p-screenshot-desc": "Ein kleines, einfaches Tool, um Screenshots und Bilder aus der Zwischenablage schnell in einem Fenster anzuzeigen.",
+        "p-beerpong-desc": "Eine Webseite zur Organisation von Bierpong-Turnieren, inklusive Gruppenphasen und K.O.-Runden. Habe ich spontan für eine Party gebraucht.",
+        "p-teller-desc": "Ich freue mich immer riesig, wenn ich jemandem ein Restaurant empfehlen kann und es ihm gefällt. Deshalb habe ich diesen kleinen Blog gebaut, wo ich Restaurants bewerte, die ich besuche.",
+        "p-spg-desc": "Der Name ist Programm... eine Webseite, die ich im Clubheim in Raggal auf dem TV laufen lasse, um dynamisch Infos anzuzeigen."
       },
       walser: {
         "nav-back": "Zruck",
@@ -172,16 +292,20 @@
         "proj-title-main": "Sacha nebabi",
         "proj-title-sub": "& Basteleia",
         "proj-intro": "Zügs wo i programmier, damit i schneller bi, oder eifach zum Lerna wenn i gad ned am Fotos macha bin.",
-        "btn-view-code": "Code aluaga",
-        "p1-title": "Workflow Automat",
-        "p1-desc": "A chliises Programm für d'Arbeit. Damit kann i neue Projekte viel schneller arichta und spar mr sicher 10 Minuta jedes mol.",
-        "p2-title": "Geld Tracker",
-        "p2-desc": "A Dashboard, damit i woass wo mis Geld anegoht. I hons baut zum Vue.js lerna und wia ma Datenbanka macht."
+        "btn-source": "Code aschaua",
+        "btn-try": "Usprobiera",
+        "btn-visit": "Aschaua",
+
+        "p-keyclicker-desc": "A Python Script, wo jedes mol, wenn ma a Taste druckt, an Sound vo na mechanischa Tastatur laufa lot. Isch für wenn ma z.B. Kopfhörer a hot, am Laptop am programmiera isch und gern geile Tastatur-Sounds im Hintergrund höra möcht. Isch nur uf Windows getestet.",
+        "p-tipsytrail-desc": "A legendäres Trinkspiel, des mr früher analog uf nam Blatt ufzeichnet gspielt hon. Leider isch as verlora ganga und anstatt nochmol zeichna, hab is als Webapp baut, dass mas immer und überall hot.",
+        "p-screenshot-desc": "Einfach a klis Tool, zum schnell in nam Fenster Screenshots und Bilder im Clipboard azumschaua.",
+        "p-beerpong-desc": "Websita, wo ma Bierpong-Turniere organisiera kann mit Gruppenphase und K.O.-Runde. Hon mr mol spontan brucht für an Hock.",
+        "p-teller-desc": "Hab immer rießen Gaude, wenn i jmd a Resti empfehla kann und se danoch segan 'war geil'. Daher hab i mr so an klina Blog baut, wo i jetzt immer Restis rate, wenn i irgwo gang.",
+        "p-spg-desc": "Name isch Programm... a Websita, dia i z'Raggol im Clubheim uf am TV laufa los, zum Infos dynamisch azum zeiga."
       }
     };
 
     function setLang(lang) {
-      // Fallback falls eine falsche Sprache im Storage ist
       if (!translations[lang]) lang = 'en';
 
       document.querySelectorAll('[data-key]').forEach(elem => {
@@ -195,7 +319,6 @@
       });
     }
 
-    // Beim Laden direkt ausführen
     document.addEventListener('DOMContentLoaded', () => {
       const savedLang = localStorage.getItem('preferredLang') || 'de';
       setLang(savedLang);
