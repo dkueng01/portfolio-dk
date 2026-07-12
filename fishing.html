@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fangbuch | David Küng</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .serif-accent {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.35s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body
+  class="bg-stone-50 text-stone-900 antialiased selection:bg-red-300 selection:text-red-900 flex flex-col min-h-screen">
+
+  <nav class="fixed top-0 w-full z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold tracking-tight hover:opacity-70 transition">DK<span
+          class="text-red-500">.</span></a>
+
+      <div class="flex items-center gap-4 text-sm font-medium">
+        <a href="index.html" class="flex items-center gap-2 hover:text-red-600 transition group">
+          <span class="group-hover:-translate-x-1 transition-transform">←</span>
+          <span data-key="nav-back">Zurück</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-20 px-4 max-w-5xl mx-auto flex-grow w-full">
+    <header class="fade-in mb-14">
+      <p class="text-blue-600 font-semibold mb-2 uppercase tracking-wider text-xs" data-key="page-subtitle">Fangbuch
+      </p>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-5">
+        <span data-key="title-main">Projekt</span> <span class="serif-accent italic font-normal text-stone-500"
+          data-key="title-accent">Null Biss</span>
+      </h1>
+      <p class="text-lg text-stone-600 leading-relaxed max-w-2xl" data-key="intro">
+        Kleine Statistik-Seite für meine Angelausflüge. Aktueller Stand: Natur sehr gut, Fisch-Ausbeute ausbaufähig.
+      </p>
+    </header>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+      <div class="bg-white rounded-2xl border border-stone-100 p-6 shadow-sm">
+        <p class="text-sm text-stone-500 mb-2" data-key="stat-days">Tage ohne Fang</p>
+        <p class="text-4xl font-extrabold" id="daysSinceCatch">...</p>
+        <p class="text-xs text-stone-400 mt-2" data-key="stat-days-note">seit Saisonstart 2026</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-stone-100 p-6 shadow-sm">
+        <p class="text-sm text-stone-500 mb-2" data-key="stat-trips">Ausflüge</p>
+        <p class="text-4xl font-extrabold" id="tripCount">7</p>
+        <p class="text-xs text-stone-400 mt-2" data-key="stat-trips-note">dieses Jahr</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-stone-100 p-6 shadow-sm">
+        <p class="text-sm text-stone-500 mb-2" data-key="stat-caught">Gefangen</p>
+        <p class="text-4xl font-extrabold" id="catchCount">0</p>
+        <p class="text-xs text-stone-400 mt-2" data-key="stat-caught-note">sportlich betrachtet</p>
+      </div>
+      <div class="bg-stone-900 text-stone-100 rounded-2xl p-6 shadow-sm">
+        <p class="text-sm text-stone-400 mb-2" data-key="stat-rate">Fangquote</p>
+        <p class="text-4xl font-extrabold" id="successRate">0%</p>
+        <p class="text-xs text-stone-400 mt-2" data-key="stat-rate-note">mathematisch sauber</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="mb-6">
+        <p class="serif-accent italic text-stone-500 text-xl">Poké Index</p>
+        <h2 class="text-3xl font-extrabold" data-key="fish-title">Fischarten</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="fishIndex"></div>
+    </section>
+  </main>
+
+  <footer class="mt-auto bg-stone-900 text-stone-400 py-2 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; 2026 David Küng. Made in Vorarlberg.</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        "nav-back": "Back",
+        "page-subtitle": "Fishing Log",
+        "title-main": "Project",
+        "title-accent": "Zero Bite",
+        "intro": "A tiny stats page for my fishing trips. Current state: nature is doing great, fish results need work.",
+        "stat-days": "Days without catch",
+        "stat-days-note": "since the 2026 season start",
+        "stat-trips": "Trips",
+        "stat-trips-note": "this year",
+        "stat-caught": "Caught",
+        "stat-caught-note": "technically speaking",
+        "stat-rate": "Catch rate",
+        "stat-rate-note": "mathematically clean",
+        "fish-title": "Fish species",
+        "badge-caught": "caught",
+        "badge-open": "open",
+        "fish-count": "Count",
+        "fish-first-catch": "First catch",
+      },
+      de: {
+        "nav-back": "Zurück",
+        "page-subtitle": "Fangbuch",
+        "title-main": "Projekt",
+        "title-accent": "Null Biss",
+        "intro": "Kleine Statistik-Seite für meine Angelausflüge. Aktueller Stand: Natur sehr gut, Fisch-Ausbeute ausbaufähig.",
+        "stat-days": "Tage ohne Fang",
+        "stat-days-note": "seit Saisonstart 2026",
+        "stat-trips": "Ausflüge",
+        "stat-trips-note": "dieses Jahr",
+        "stat-caught": "Gefangen",
+        "stat-caught-note": "sportlich betrachtet",
+        "stat-rate": "Fangquote",
+        "stat-rate-note": "mathematisch sauber",
+        "fish-title": "Fischarten",
+        "badge-caught": "gefangen",
+        "badge-open": "offen",
+        "fish-count": "Anzahl",
+        "fish-first-catch": "Erster Fang",
+      },
+      walser: {
+        "nav-back": "Zruck",
+        "page-subtitle": "Fangbuach",
+        "title-main": "Projekt",
+        "title-accent": "Null Biss",
+        "intro": "A klini Statistik-Sita für mine Fisch-Ausflüg. Aktuell: Natur richtig guat, Fisch-Ausbeut no usbaufähig.",
+        "stat-days": "Täg ohne Fang",
+        "stat-days-note": "sit Saisonstart 2026",
+        "stat-trips": "Usflüg",
+        "stat-trips-note": "des Johr",
+        "stat-caught": "Gfanga",
+        "stat-caught-note": "sportlich gseh",
+        "stat-rate": "Fangquote",
+        "stat-rate-note": "mathematisch sauber",
+        "fish-title": "Fischarte",
+        "badge-caught": "gfanga",
+        "badge-open": "offa",
+        "fish-count": "Azohl",
+        "fish-first-catch": "Erschta Fang",
+      }
+    };
+
+    const fishingStats = {
+      seasonStart: '2026-01-01T00:00:00',
+      trips: 7,
+    };
+
+    const fishSpecies = [
+      {
+        name: 'Bachforelle',
+        status: 'locked',
+        image: '',
+        firstCatch: '',
+        count: 0,
+      },
+      {
+        name: 'Regenbogenforelle',
+        status: 'locked',
+        image: '',
+        firstCatch: '',
+        count: 0,
+      },
+      {
+        name: 'Saibling',
+        status: 'locked',
+        image: '',
+        firstCatch: '',
+        count: 0,
+      },
+    ];
+
+    const totalTrips = fishingStats.trips;
+    const totalCatches = fishSpecies.reduce((sum, fish) => sum + fish.count, 0);
+    const dayMs = 1000 * 60 * 60 * 24;
+    const daysSinceStart = Math.max(0, Math.floor((new Date() - new Date(fishingStats.seasonStart)) / dayMs));
+
+    document.getElementById('daysSinceCatch').innerText = daysSinceStart;
+    document.getElementById('tripCount').innerText = totalTrips;
+    document.getElementById('catchCount').innerText = totalCatches;
+    document.getElementById('successRate').innerText = totalTrips ? `${Math.round((totalCatches / totalTrips) * 100)}%` : '0%';
+
+    function renderFishIndex(lang) {
+      const text = translations[lang] || translations.de;
+
+      document.getElementById('fishIndex').innerHTML = fishSpecies.map((fish, index) => {
+        const isCaught = fish.status === 'caught';
+        const imageMarkup = fish.image
+          ? `<img src="${fish.image}" alt="${fish.name}" class="w-full h-full object-cover">`
+          : `<div class="w-full h-full flex items-center justify-center text-5xl text-stone-300">?</div>`;
+
+        return `
+          <article class="bg-white rounded-2xl border border-stone-100 p-5 shadow-sm">
+            <div class="aspect-[4/3] rounded-xl bg-stone-100 border border-stone-200 overflow-hidden mb-4">
+              ${imageMarkup}
+            </div>
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-xs text-stone-400 font-mono">#${String(index + 1).padStart(3, '0')}</p>
+                <h3 class="font-bold text-xl">${fish.name}</h3>
+              </div>
+              <span class="rounded-full px-3 py-1 text-xs font-bold ${isCaught ? 'bg-green-50 text-green-700' : 'bg-stone-100 text-stone-500'}">
+                ${isCaught ? text["badge-caught"] : text["badge-open"]}
+              </span>
+            </div>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm text-stone-600">
+              <div>
+                <p class="text-xs text-stone-400">${text["fish-count"]}</p>
+                <p class="font-bold text-stone-900">${fish.count}</p>
+              </div>
+              <div>
+                <p class="text-xs text-stone-400">${text["fish-first-catch"]}</p>
+                <p class="font-bold text-stone-900">${fish.firstCatch || '-'}</p>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function setLang(lang) {
+      if (!translations[lang]) lang = 'de';
+
+      document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang][key]) {
+          elem.innerText = translations[lang][key];
+          elem.classList.remove('fade-in');
+          void elem.offsetWidth;
+          elem.classList.add('fade-in');
+        }
+      });
+
+      renderFishIndex(lang);
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'de';
+      setLang(savedLang);
+    });
+  </script>
+</body>
+
+</html>
